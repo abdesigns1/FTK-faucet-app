@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    font-family: "DM Sans", system-ui, sans-serif;
+    background-color: #0c1117;
+    color: #f0f0f0;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  input::placeholder {
+    color: rgba(255, 255, 255, 0.2);
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.03);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+  }
+}
+
+@layer components {
+  /* Card base */
+  .card {
+    @apply bg-white/[0.03] border border-white/[0.07] rounded-2xl p-6 flex flex-col gap-4;
+  }
+
+  /* Input base */
+  .field-input {
+    @apply w-full bg-white/[0.05] border border-white/10 rounded-xl px-4 py-3
+           text-sm text-white placeholder:text-white/20
+           focus:outline-none focus:border-[#00ff88]/50
+           transition-colors duration-150 font-mono;
+  }
+
+  /* Green glow badge */
+  .badge-green {
+    @apply inline-flex items-center gap-1.5 text-xs font-mono text-[#00ff88]/80
+           bg-[#00ff88]/10 border border-[#00ff88]/20 px-2.5 py-1 rounded-full;
+  }
+
+  /* Section label */
+  .label {
+    @apply text-[10px] font-mono tracking-widest uppercase text-white/40;
+  }
+}
+
+@layer utilities {
+  .text-brand {
+    color: #00ff88;
+  }
+  .border-brand {
+    border-color: #00ff88;
+  }
+  .bg-brand {
+    background-color: #00ff88;
+  }
+
+  /* Tabular numeric rendering */
+  .num {
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Subtle grid background */
+  .bg-grid {
+    background-image:
+      linear-gradient(rgba(0, 255, 136, 0.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 255, 136, 0.025) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+}
