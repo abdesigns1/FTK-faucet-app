@@ -66,7 +66,7 @@ export default function Dashboard() {
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#00ff88] to-[#00ccaa] flex items-center justify-center font-black text-[#0a0a0a] text-sm select-none">
-              F
+              FTK
             </div>
             <div className="leading-tight">
               <div className="font-bold text-sm tracking-wide">
